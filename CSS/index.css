@@ -1,0 +1,51 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin-top: -20px;
+    
+}
+
+.sub-main {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+.sub-main img {
+    height: 16px;
+    width: 16px;
+    align-items: center;
+    /* margin-bottom: 60px; */
+}
+
+.sub-main button {
+    height: 36px;
+    width: 150px;
+    border-radius: 12px;
+    background-color: #FF6600;
+    border: none;
+    color: white;
+}
+
+.NG {
+    width: 21%;
+}
+
+.NG p {
+    color: grey;
+    font-size: small;
+}
+.ali{
+    align-items: center;
+}
+.main-2{
+margin-top: -19px;   
+}
+.cat{
+    display: flex;
+    align-items: center;
+}
+.fish{
+     display: flex;
+}
