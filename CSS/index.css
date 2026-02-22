@@ -1,23 +1,9 @@
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: white;
-}
-
 .main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: -20px;
 }
-
-/* .main-2 {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-} */
-
 .sub-main {
     display: flex;
     gap: 2%;
