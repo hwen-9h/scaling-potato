@@ -1,33 +1,41 @@
-.main {
+.main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -20px;
+    padding-top: 7px;
+    padding-left: 2%;
 }
+
 .sub-main {
     display: flex;
     gap: 2%;
     align-items: center;
 }
-
+.yy {
+    display: flex;
+    gap: 2%;
+}
 .sub-main img {
     height: 2vh;
     width: 2vw;
     align-items: center;
     /* margin-bottom: 60px; */
 }
-
 .sub-main button {
     height: 36px;
     width: 150px;
     border-radius: 12px;
     background-color: #FF6600;
     border: none;
+}
+
+.sub-main button a {
     color: white;
+    text-decoration: none;
 }
 
 .NG {
-    width: 21%;
+    width: 50%;
 }
 
 .NG p {
@@ -55,7 +63,9 @@
 
 .fish {
     display: flex;
-    gap: 2%;
+    gap: 7%;
+    width: 100%;
+    font-family: sans-serif;
 }
 
 .dropbtn-1 {
@@ -70,12 +80,19 @@
 .dropdown-content-1 {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: white;
     width: 1100%;
-    height: 400%;
-    padding-bottom: 30%;
+    height: 900%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.dropdown-content-15 {
+    background-color: white;
+    height: 900%;
 }
 
 .dropdown-content-1 a {
@@ -83,6 +100,8 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    overflow-x: hidden;
+    height: -400%;
 }
 
 .dropdown-content-1 a:hover {
@@ -183,10 +202,156 @@
     font-family: sans-serif;
 }
 
+
 .border {
     border: 2px solid #FF6600;
-    width: 50%;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+}
+
+.border:hover {
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+#AI {
+    width: 80%;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.image:hover {
+    text-decoration: underline black 1px;
+}
+
+
+/* #AI {
+    margin-top: 2%;
+    margin-left: 4%;
+    width: 80vw;
+    height: 10vh;
     border-radius: 12px;
-    padding: 7%;
-    box-shadow: 0px 0px 20px 0px #FF6600;
+    border: none;
+    outline: none;
+} */
+
+.ff button {
+    background: #FF6600;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.ff button a {
+    color: black;
+    text-decoration: none;
+}
+
+.fg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+.fb{
+    height: 900%;
+}
+.main-2 {
+    display: flex;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.fish-2 {
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: #FFF5EC;
+}
+.AI{
+ background-color: #FFF5EC;
+ padding-top: 5%;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.type h3{
+    font-family: sans-serif;
+    padding: 4%;
+    margin-left:4%;
+    background-color: rgb(237, 237, 237);
+    font-weight: 600;
+    font-size: medium;
+}
+.type h3:hover{
+    background-color: white;
+}
+.type{
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 10%;
+}
+.sell:hover{
+    text-decoration: underline 2px solid;
+}
+.sell a{
+    text-decoration: none;
+    color: black;
+}
+.hg button{
+    height: 36px;
+    width: 150px;
+    border-radius: 12px;
+    background-color: #FF6600;
+    border: none;
+}
+.hg a {
+    color: white;
+    text-decoration: none;
+}
+@media( max-width: 900px ){
+    .dropbtn-2{
+        display: none;
+    }
+    .yy{
+        display: none;
+    }
+    .dropbtn-3{
+        display: none;
+    }
+    .dropbtn-4{
+         display: none;
+    }
+    .dropbtn-5{
+         display: none;
+    }
+    .dropbtn-6{
+         display: none;
+    }
+    .sell{
+         display: none;
+    }
+    .d{
+
+    }
+    .ddd{
+
+    }
+    .
+}
+.ha{
+    background-image: url(https://s.alicdn.com/@sc04/kf/H58b950fa6f9d492eada2ffae88981207J.jpg_350x350.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    
 }
