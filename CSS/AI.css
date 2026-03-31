@@ -1,0 +1,650 @@
+:root {
+            --primary-orange: #ff6600;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #f1f1f1;
+            --promo-gradient: linear-gradient(90deg, #1d60ff, #c359ff);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #fffcf9 0%, #fdeee2 50%, #f5f7ff 100%);
+            min-height: 100vh;
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .header-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--primary-orange);
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            letter-spacing: -1px;
+            margin-right: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        .ai-mode-active {
+            position: relative;
+            font-weight: 600;
+        }
+
+        .ai-mode-active::after {
+            content: '';
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #000;
+        }
+
+        .nav-right {
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .utility-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .label-grey {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .btn-create {
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-create:hover {
+            background: #e65c00;
+        }
+
+        /* Main Layout */
+        .layout-container {
+            display: flex;
+            min-height: calc(100vh - 73px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 64px;
+            border-right: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 0;
+            gap: 32px;
+        }
+
+        .sidebar-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .sidebar-btn:hover {
+            color: var(--primary-orange);
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+        }
+
+        /* Content Area */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 64px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .promo-pill {
+            background: var(--promo-gradient);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 48px;
+            box-shadow: 0 4px 15px rgba(29, 96, 255, 0.2);
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .promo-pill:hover {
+            opacity: 0.9;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #222;
+        }
+
+        /* Search Box */
+        .search-box {
+            width: 100%;
+            max-width: 768px;
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            border: 1px solid #ffe8d6;
+            box-shadow: 0 10px 40px rgba(255, 120, 0, 0.08);
+            transition: box-shadow 0.3s;
+        }
+
+        .search-box:focus-within {
+            box-shadow: 0 10px 40px rgba(255, 120, 0, 0.15);
+        }
+
+        .search-textarea {
+            width: 100%;
+            height: 50px;
+            border: none;
+            outline: none;
+            resize: none;
+            font-size: 18px;
+            color: var(--text-main);
+        }
+
+        .search-textarea::placeholder {
+            color: #ccc;
+        }
+
+        .search-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .attachment-btn {
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .attachment-btn:hover {
+            color: var(--text-secondary);
+        }
+
+        .submit-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #eee;
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: not-allowed;
+            transition: background 0.3s;
+        }
+
+        .search-box:focus-within .submit-btn {
+            background: var(--primary-orange);
+            cursor: pointer;
+        }
+
+        /* Chips */
+        .chips-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 768px;
+            margin-top: 32px;
+        }
+
+        .chip {
+            background: white;
+            border: 1px solid #eee;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+        }
+
+        .chip:hover {
+            border-color: #ffccaa;
+            transform: translateY(-1px);
+        }
+
+        .chip-next {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+
+
+        @media (max-width: 768px) {
+
+
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+        }
+
+        @media(max-width: 1111px) {
+
+            .nav-links,
+            .nav-right .utility-item:not(:last-child) {
+                display: none;
+            }
+
+        }
+
+        .container {
+            margin-top: 15%;
+            max-width: 1400px;
+            width: 100%;
+        }
+
+
+        .tabs {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid transparent;
+
+        }
+
+        .tab {
+            font-size: 18px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding-bottom: 12px;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .tab:hover {
+            color: var(--text-main);
+        }
+
+        .tab.active {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--text-main);
+            border-radius: 2px 2px 0 0;
+        }
+
+        /* Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 20px;
+            }
+        }
+
+        /* Grid Layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Typography & Headers */
+        .card-header,
+        .card-category {
+            font-size: 14px;
+            color: #6b7280;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        /* Specific adjustment for bottom row cards where title is on top */
+        .bottom-card .card-category {
+            margin-bottom: 20px;
+        }
+
+        /* Inner Image Container */
+        .card-image-container {
+            flex-grow: 1;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .align-bottom {
+            align-items: flex-end;
+            padding-bottom: 0;
+        }
+
+        .card-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Inner graphic styling (for the top row mimicking the UI) */
+        .placeholder-graphic {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            width: 100%;
+        }
+
+        .placeholder-graphic p {
+            font-size: 10px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+         /* ----- footer exactly as described ----- */
+        .alibaba-footer {
+            background-color: #f5f7fa;       /* light, neutral background like alibaba.com */
+            border-top: 1px solid #e2e6ea;
+            padding: 1.8rem 1rem;
+            font-size: 0.85rem;
+            color: #3d4e5e;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        #footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* all three lines use similar spacing */
+        .footer-line {
+            margin: 0.75rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+            gap: 0.3rem 0;          /* gaps handled by separators, but we need wrap spacing */
+        }
+
+        /* first line: platforms separated by pipes */
+        .platform-links {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+            row-gap: 0.3rem;
+        }
+
+        .platform-links a,
+        .policy-links a,
+        .legal-links a {
+            color: #3d4e5e;
+            text-decoration: none;
+            white-space: nowrap;      /* keep each item in one line, but whole wraps */
+            transition: color 0.1s;
+        }
+
+        .platform-links a:hover,
+        .policy-links a:hover,
+        .legal-links a:hover {
+            color: #fc7200;            /* alibaba orange */
+            text-decoration: underline;
+        }
+
+        /* pipe separator – show after each link except the last */
+        .pipe-item {
+            display: inline-flex;
+            align-items: baseline;
+        }
+
+        .pipe-item a {
+            margin-right: 0.2rem;
+        }
+
+        .pipe-item .separator {
+            margin: 0 0.4rem;
+            color: #a0b0bd;
+            font-weight: 300;
+        }
+
+        .pipe-item:last-child .separator {
+            display: none;
+        }
+
+        /* alternative simpler: we can build using inline blocks and pseudo */
+        /* but using simple spans with content for clarity */
+        .platform-links .link-with-pipe {
+            display: inline-block;
+        }
+
+        .platform-links .link-with-pipe::after {
+            content: "|";
+            margin: 0 0.5rem;
+            color: #b6c4d2;
+            font-weight: 300;
+            display: inline-block;
+        }
+
+        .platform-links .link-with-pipe:last-child::after {
+            content: none;
+        }
+
+        /* second line: middle dot separators */
+        .policy-links {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+            row-gap: 0.2rem;
+        }
+
+        .policy-item {
+            display: inline-block;
+        }
+
+        .policy-item::after {
+            content: "·";
+            margin: 0 0.5rem;
+            color: #a0b0bd;
+            font-size: 1.2rem;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .policy-item:last-child::after {
+            content: none;
+        }
+
+        /* third line: legal info – no separators, just spaces. 
+           but we want wrap without extra punctuation */
+        .legal-line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+            gap: 0 0.35rem;          /* tiny gap between segments */
+            margin-top: 0.5rem;
+            color: #4f6273;
+        }
+
+        .legal-line span {
+            white-space: nowrap;      /* each logical chunk stays together */
+        }
+
+        /* copyright symbol */
+        .copyright {
+            font-weight: 400;
+        }
+
+        /* responsive: on narrow screens, everything wraps gracefully */
+        @media (max-width: 600px) {
+            .alibaba-footer {
+                padding: 1.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            .legal-line span {
+                white-space: normal;   /* allow wrap inside long chunks if needed */
+            }
+            .policy-item::after {
+                margin: 0 0.3rem;
+            }
+        }
+
+        /* subtle style for chinese text */
+        .chinese-text {
+            color: #3d4e5e;
+        }
